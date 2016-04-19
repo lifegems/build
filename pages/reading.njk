@@ -1,0 +1,23 @@
+{% extends "../templates/shell.njk" %}
+
+{% block content %}
+
+{% import "../partials/menu.njk" as menu %}
+{{ menu.active('reading') }}
+
+<div class="container">
+   <h1>Daily Bible Reading</h1>
+   <p>Track your daily bible reading progress</p>
+
+   <div class="booksContainer"></div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="js/lib/DB.js"></script>
+<script type="text/javascript" src="js/lib/biblebooksview.js"></script>
+<script type="text/javascript">
+   var bbv = new BibleBooksView(".booksContainer");
+</script>
+{% endblock %}

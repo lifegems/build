@@ -1,0 +1,17 @@
+@mixin setDeviceStyle($Device) {
+   @if $Device == phone {
+      @media screen and (max-width: 767px) {
+         @content;
+      }
+   }
+   @if $Device == tablet {
+      @media screen and (min-width: 768px) and (max-width: 1040px) {
+         @content;
+      }
+   }
+   @if $Device == desktop {
+      @media screen and (min-width: 1041px) {
+         @content;
+      }
+   }
+}

@@ -1,0 +1,13 @@
+{% extends "../templates/shell.njk" %}
+
+{% block content %}
+
+{% import "../partials/menu.njk" as menu %}
+{{ menu.active('home') }}
+
+<div class="container">
+   <h1>Home</h1>
+   <p>Welcome to the Bible Study apps.</p>
+</div>
+
+{% endblock %}

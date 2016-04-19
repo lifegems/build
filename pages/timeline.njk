@@ -1,0 +1,13 @@
+{% extends "../templates/shell.njk" %}
+
+{% block content %}
+
+{% import "../partials/menu.njk" as menu %}
+{{ menu.active('timeline') }}
+
+<div class="container">
+   <h1>Bible Timeline</h1>
+   <p>View the history of the bible according to time period.</p>
+</div>
+
+{% endblock %}

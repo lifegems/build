@@ -1,0 +1,13 @@
+{% extends "../templates/shell.njk" %}
+
+{% block content %}
+
+{% import "../partials/menu.njk" as menu %}
+{{ menu.active('notes') }}
+
+<div class="container">
+   <h1>My Notes</h1>
+   <p>Takes notes of your favorite accounts and articles.</p>
+</div>
+
+{% endblock %}

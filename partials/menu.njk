@@ -1,0 +1,59 @@
+{% macro active(activePage)%}
+
+<!-- MENU DROPDOWN -->
+<ul id="menu--dropdown" class="dropdown-content">
+   <li class="{%if activePage == 'reading' %} active {% endif %}"><a href="reading.html"><i class="material-icons left">bookmark_border</i>Daily Reading</a></li>
+   <li class="{%if activePage == 'timeline' %} active {% endif %}"><a href="timeline.html"><i class="material-icons left">timer</i>Bible Timeline</a></li>
+   <li class="{%if activePage == 'notes' %} active {% endif %}"><a href="notes.html"><i class="material-icons left">create</i>My Notes</a></li>
+</ul>
+
+<div class="navbar-fixed">
+   <nav class="menu">
+      <h4 class="brand-logo center">Life Gems</h4>
+
+      <ul class="left hide-on-small-only">
+         <li><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+         <!-- Dropdown Trigger -->
+         <li><a class="dropdown-button" href="#!" data-activates="menu--dropdown">Bible Study Apps<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+      <ul class="right hide-on-small-only">
+         <li><a href="#modal1" class="modal-trigger"><i class="material-icons left">account_box</i>Log In</a></li>
+      </ul>
+
+      <ul id="slide-out" class="side-nav">
+         <li class="{%if activePage == 'home' %} active {% endif %}"><a href="index.html"><i class="material-icons left">home</i>Home</a></li>
+         <li class="{%if activePage == 'reading' %} active {% endif %}"><a href="reading.html"><i class="material-icons left">bookmark_border</i>Daily Reading</a></li>
+         <li class="{%if activePage == 'timeline' %} active {% endif %}"><a href="timeline.html"><i class="material-icons left">timer</i>Bible Timeline</a></li>
+         <li class="{%if activePage == 'notes' %} active {% endif %}"><a href="notes.html"><i class="material-icons left">create</i>My Notes</a></li>
+      </ul>
+      <a href="#" id="menu--toggle" data-activates="slide-out" class="button-collapse menu--item"><i class="material-icons">menu</i></a>
+      <a href="#modal1" id="login--toggle" class="modal-trigger right button-collapse menu--item"><i class="material-icons">account_box</i></a>
+   </nav>
+</div>
+
+
+<!-- MODAL LOGIN WINDOW -->
+<div id="modal1" class="modal">
+   <div class="modal-content">
+      <h4>Log In</h4>
+      <div class="row">
+         <form class="col s11">
+            <div class="row">
+               <div class="input-field col s12">
+                  <input id="icon_prefix" type="text" class="validate">
+                  <label for="icon_prefix">Email</label>
+               </div>
+               <div class="input-field col s12">
+                  <input id="icon_telephone" type="password" maxlength="4" class="validate">
+                  <label for="icon_telephone">PIN</label>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+   <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">LOG IN</a>
+   </div>
+</div>
+
+{% endmacro %}
